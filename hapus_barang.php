@@ -1,10 +1,11 @@
 <?php
 include 'koneksi.php';
+$id = $_GET['id'];
 
-$data = mysqli_query($koneksi, "DELETE FROM `tb_pakaian` WHERE id_pakaian=28");
-if ($data){
-    echo "DELETE berhasil";
-    header("location:tampil_barang.php");
+$data = mysqli_query($koneksi, "DELETE FROM `tb_pakaian` WHERE `id_pakaian` = $id");
+
+if($data == TRUE){
+    header("location: tampil_barang.php");
+}else{
+    echo "gagal hapus";
 }
-
-?>

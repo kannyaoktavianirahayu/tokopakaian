@@ -12,8 +12,9 @@ foreach($data as $data){
     echo $data['jumlah_pakaian'];
     echo $data['stok_pakaian']."<br>";
     ?>
+    <a href="hapus_barang.php?id=<?php echo $data['id_pakaian']?>">hapus</a>
+    &nbsp
+    <a href="edit_barang.php?id=<?php echo $data['id_pakaian']?>">edit</a>
     <br>
-    
-    <a href="hapus_barang.php?id_pakaian=<?php echo $data['id_pakaian'] ?>">delete</a>
     <?php
 }
